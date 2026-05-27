@@ -16,6 +16,7 @@ import espacoLivre from './exercicioss/exercicio14.js';
 import converterDolar from './exercicioss/exercicio15.js';
 import trigonometria from './exercicioss/exercico16.js';
 import potenciacao from './exercicioss/exercico17.js';
+import produtos from './exercicioss/exercicio18.js';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -44,6 +45,7 @@ function exibirMenu() {
   console.log("15. Converter Dólar para Real")
   console.log("16. Seno, Cosseno e Tangente de um Ângulo")
   console.log("17. Potenciação")
+  console.log("18. Calcular troco de 5 produtos")
 
   rl.question('Escolha uma opção (1-80): ', (opcao) => {
     switch (opcao.trim()) {
@@ -115,6 +117,10 @@ function exibirMenu() {
       case '17':
         console.log('\n-> Redirecionando para Potenciação...');
         potenciacao(rl, exibirMenu);
+        break;
+      case '18':
+        console.log('\n-> Redirecionando para calcular troco...');
+        produtos(rl, exibirMenu);
         break;
       default:
         console.log('\nOpção inválida! Tente novamente.');
