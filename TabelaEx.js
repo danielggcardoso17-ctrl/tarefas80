@@ -1,0 +1,22 @@
+const exercicios = {
+    "1": { nome: "Área do Retângulo", fn: areaRetangulo },
+    "2": { nome: "Área do Quadrado apartir de sua aresta", fn: areaDoQuadrado },
+    "3": { nome: "Área do Quadrado apartir da sua diagonal", fn: diagonalQuadrado },
+    "4": { nome: "Área do Triângulo", fn: areaTriangulo },
+    "5": { nome: "Volume da esfera apartir de seu diâmetro", fn: VolEsfera },
+    "6": { nome: "Média aritimetica de 4 valores", fn: mediaAritimetica },
+    "7": { nome: "Média geométrica", fn: mediaGeometrica },
+    "8": { nome: "Conversor de milhas marítimas para quilômetros", fn: milhasMaEmMetros },
+    "9": { nome: "Calculadora de Tensão elétrica", fn: tensaoCircuito },
+    "10": { nome: "Conversor de Celsius para Fahrenheint", fn: celsiusToFahren },
+    "11": { nome: "Área do circulo", fn: areaCirculo },
+    "12": { nome: "Volume do cone", fn: VolCone },
+    "13": { nome: "Velocidade final", fn: velocidade },
+    "14": { nome: "Espaço Livre", fn: espacoLivre },
+    "15": { nome: "Converter Dólar para Real", fn: converterDolar },
+    "16": { nome: "Seno, Cosseno e Tangente de um Ângulo", fn: trigonometria },
+    "17": { nome: "Potenciação", fn: potenciacao },
+    "18": { nome: "Calcular troco de 5 produtos", fn: produtos },
+    "19": { nome: "Qual é o maior número", fn: exibirMaiorValor },
+    "20": { nome: "Qual é o menor número", fn: exibirMenorValor }
+}

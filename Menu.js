@@ -17,17 +17,55 @@ import converterDolar from './exercicioss/exercicio15.js';
 import trigonometria from './exercicioss/exercico16.js';
 import potenciacao from './exercicioss/exercico17.js';
 import produtos from './exercicioss/exercicio18.js';
+import exibirMaiorValor from './exercicioss/exercicio19.js';
+import exibirMenorValor from './exercicioss/exercicio20.js';
+import exibirIgual from './exercicioss/exercicio21.js';
+import areaRetangulo100 from './exercicioss/exercicio22.js';
+import areaRetangulo2 from './exercicioss/exercicio23';
+import exibir from './exercicioss/exercicio24.js';
+import pesoAltura from './exercicio25.js';
+
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
+const exercicios = {
+  1: { nome: "Área do Retângulo", fn: areaRetangulo },
+  2: { nome: "Área do Quadrado apartir de sua aresta", fn: areaDoQuadrado },
+  3: { nome: "Área do Quadrado apartir da sua diagonal", fn: diagonalQuadrado },
+  4: { nome: "Área do Triângulo", fn: areaTriangulo },
+  5: { nome: "Volume da esfera apartir de seu diâmetro", fn: VolEsfera },
+  6: { nome: "Média aritimetica de 4 valores", fn: mediaAritimetica },
+  7: { nome: "Média geométrica", fn: mediaGeometrica },
+  8: { nome: "Conversor de milhas marítimas para quilômetros", fn: milhasMaEmMetros },
+  9: { nome: "Calculadora de Tensão elétrica", fn: tensaoCircuito },
+  10: { nome: "Conversor de Celsius para Fahrenheint", fn: celsiusToFahren },
+  11: { nome: "Área do circulo", fn: areaCirculo },
+  12: { nome: "Volume do cone", fn: VolCone },
+  13: { nome: "Velocidade final", fn: velocidade },
+  14: { nome: "Espaço Livre", fn: espacoLivre },
+  15: { nome: "Converter Dólar para Real", fn: converterDolar },
+  16: { nome: "Seno, Cosseno e Tangente de um Ângulo", fn: trigonometria },
+  17: { nome: "Potenciação", fn: potenciacao },
+  18: { nome: "Calcular troco de 5 produtos", fn: produtos },
+  19: { nome: "Qual é o maior número", fn: exibirMaiorValor },
+  20: { nome: "Qual é o menor número", fn: exibirMenorValor },
+  21: { nome: "VERIFICAR SE OS NÚMEROS SÃO IGUAIS OU MAIOR QUE O OUTRO", fn: exibirIgual },
+  22: { nome: "A OUTRA CALCULADORA DE ÁREA DO RETÂNGULO", fn: areaRetangulo100 },
+  23: { nome: "MAIS UMA OUTRA CALCULADORA DE ÁREA DO RETÂNGULO", fn: areaRetangulo2 },
+  24: { nome: "asdffd", fn: exibir },
+  25: { nome: "dfgsdfgs", fn: pesoAltura }
+}
+
 function exibirMenu() {
   console.clear()
   console.log("==========================================")
   console.log("             MENU INTERATIVO")
   console.log("==========================================")
+
+
   console.log("1. Área do Retângulo")
   console.log("2. Área do Quadrado apartir de sua aresta")
   console.log("3. Área do Quadrado apartir da sua diagonal")
@@ -46,87 +84,28 @@ function exibirMenu() {
   console.log("16. Seno, Cosseno e Tangente de um Ângulo")
   console.log("17. Potenciação")
   console.log("18. Calcular troco de 5 produtos")
+  console.log("19. Qual é o maior número")
+  console.log("20. Qual é o menor número")
+  console.log("21. VERIFICAR SE OS NÚMEROS SÃO IGUAIS OU MAIOR QUE O OUTRO")
+  console.log("22. OUTRA CALCULADORA DE ÁREA DO RETÂNGULO")
+  console.log("23. MAIS UMA OUTRA CALCULADORA DE ÁREA DO RETÂNGULO")
+  console.log("24. qual o MAIOR VALOR ENTRE 3 NÚMEROS")
+  console.log("25. analisar seu peso")
 
-  rl.question('Escolha uma opção (1-80): ', (opcao) => {
-    switch (opcao.trim()) {
-      case '1':
-        console.clear();
-        console.log('\n-> Redirecionando para exercício Área do Retângulo...');
-        areaRetangulo(rl, exibirMenu);
-        break;
-      case '2':
-        console.log('\n-> Redirecionando para exercício Área do Quadrado...');
-        areaDoQuadrado(rl, exibirMenu);
-        break;
-      case '3':
-        console.log('\n-> Redirecionando para exercício Área do Quadrado através da sua diagonal...');
-        diagonalQuadrado(rl, exibirMenu);
-        break;
-      case '4':
-        console.log('\n-> Redirecionando para exercício Área do Triângulo através da base e altura...');
-        areaTriangulo(rl, exibirMenu);
-        break;
-      case '5':
-        console.log('\n-> Redirecionando para exercício Volume da esfera apartir do seu diâmetro...');
-        VolEsfera(rl, exibirMenu);
-        break;
-      case '6':
-        console.log('\n-> Redirecionando para exercício Média aritimetica...');
-        mediaAritimetica(rl, exibirMenu);
-        break;
-      case '7':
-        console.log('\n-> Redirecionando para exercício Média geometrica entre 2 valores...');
-        mediaGeometrica(rl, exibirMenu);
-        break;
-      case '8':
-        console.log('\n-> Redirecionando para exercício Conversor de milha marítimas para quilômetros...');
-        milhasMaEmMetros(rl, exibirMenu);
-        break;
-      case '9':
-        console.log('\n-> Redirecionando para exercício Calculadora de tensão elétrica...');
-        tensaoCircuito(rl, exibirMenu);
-        break;
-      case '10':
-        console.log('\n-> Redirecionando para exercício Calculadora de tensão elétrica...');
-        celsiusToFahren(rl, exibirMenu);
-        break;
-      case '11':
-        console.log('\n-> Redirecionando para exercício Calculadora de tensão elétrica...');
-        areaCirculo(rl, exibirMenu);
-        break;
-      case '12':
-        console.log('\n-> Redirecionando para exercício Volume do cone...');
-        VolCone(rl, exibirMenu);
-        break;
-      case '13':
-        console.log('\n-> Redirecionando para calcular velocidade final...');
-        velocidade(rl, exibirMenu);
-        break;
-      case '14':
-        console.log('\n-> Redirecionando para calcular espaço livre...');
-        espacoLivre(rl, exibirMenu);
-        break;
-      case '15':
-        console.log('\n-> Redirecionando para converter dolar para real...');
-        converterDolar(rl, exibirMenu);
-        break;
-      case '16':
-        console.log('\n-> Redirecionando para Trigonometria...');
-        trigonometria(rl, exibirMenu);
-        break;
-      case '17':
-        console.log('\n-> Redirecionando para Potenciação...');
-        potenciacao(rl, exibirMenu);
-        break;
-      case '18':
-        console.log('\n-> Redirecionando para calcular troco...');
-        produtos(rl, exibirMenu);
-        break;
-      default:
-        console.log('\nOpção inválida! Tente novamente.');
+  rl.question("Escolha uma opção (1-80): ", (opcao) => {
+    const suaEscolha = opcao.trim()
+
+    if (exercicios[suaEscolha]) {
+      console.clear();
+      console.log(`\n-> Redirecionando para exercício ${exercicios[suaEscolha].nome}...`);
+      exercicios[suaEscolha].fn(rl, exibirMenu);
+    } else {
+      console.log("opção inválida, tente novamente...")
+      rl.question("Pressione ENTER para voltar ao menu...", () => {
         exibirMenu();
+      })
     }
-  });
-};
+  })
+}
 
 exibirMenu();
