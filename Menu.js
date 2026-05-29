@@ -21,10 +21,17 @@ import exibirMaiorValor from './exercicioss/exercicio19.js';
 import exibirMenorValor from './exercicioss/exercicio20.js';
 import exibirIgual from './exercicioss/exercicio21.js';
 import areaRetangulo100 from './exercicioss/exercicio22.js';
-import areaRetangulo2 from './exercicioss/exercicio23';
+import areaRetangulo2 from './exercicioss/exercicio23.js';
 import exibir from './exercicioss/exercicio24.js';
-import pesoAltura from './exercicio25.js';
-
+import pesoAltura from './exercicioss/exercicio25.js';
+import triangulo from './exercicioss/exercicio26.js';
+import trianguloRetangulo from './exercicioss/exercicio27.js';
+import pesoAlturaSexo from './exercicioss/exercicio28.js';
+import velocidadee from './exercicioss/exercicio29.js';
+import MediaDoAluno from './exercicioss/exercicio30.js';
+import MediaDoAluno2 from './exercicioss/exercicio31.js';
+import apenasPositivo from './exercicioss/exercicio32.js';
+import ex33 from './exercicioss/exercicio33.js';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -56,7 +63,15 @@ const exercicios = {
   22: { nome: "A OUTRA CALCULADORA DE ÁREA DO RETÂNGULO", fn: areaRetangulo100 },
   23: { nome: "MAIS UMA OUTRA CALCULADORA DE ÁREA DO RETÂNGULO", fn: areaRetangulo2 },
   24: { nome: "asdffd", fn: exibir },
-  25: { nome: "dfgsdfgs", fn: pesoAltura }
+  25: { nome: "dfgsdfgs", fn: pesoAltura },
+  26: { nome: "VERIFICAR SE AS MEDIDAS FORMAM UM TRIÂNGULO", fn: triangulo },
+  27: { nome: "VERIFICAR SE AS MEDIDAS FORMAM UM TRIÂNGULO RETÂNGULO", fn: trianguloRetangulo },
+  28: { nome: "Exercício 28", fn: pesoAlturaSexo },
+  29: { nome: "exercicio 29", fn: velocidadee },
+  30: { nome: "exercicio 30", fn: MediaDoAluno },
+  31: { nome: "exercício 31", fn: MediaDoAluno2 },
+  32: { nome: "exercício 32", fn: apenasPositivo },
+  33: { nome: "exercício 33", fn: ex33 }
 }
 
 function exibirMenu() {
@@ -91,6 +106,14 @@ function exibirMenu() {
   console.log("23. MAIS UMA OUTRA CALCULADORA DE ÁREA DO RETÂNGULO")
   console.log("24. qual o MAIOR VALOR ENTRE 3 NÚMEROS")
   console.log("25. analisar seu peso")
+  console.log("26. VERIFICAR SE AS MEDIDAS FORMAM UM TRIÂNGULO")
+  console.log("27. VERIFICAR SE AS MEDIDAS FORMAM UM TRIÂNGULO RETÂNGULO")
+  console.log("28. Exercício 28")
+  console.log("29. Exercício 29")
+  console.log("30. Exercício 30")
+  console.log("31. Exercício 31")
+  console.log("32. Exercício 32")
+  console.log("33. Exercício 33")
 
   rl.question("Escolha uma opção (1-80): ", (opcao) => {
     const suaEscolha = opcao.trim()
