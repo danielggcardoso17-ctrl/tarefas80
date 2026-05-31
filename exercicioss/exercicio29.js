@@ -9,7 +9,8 @@ function velocidadee(rl, exibirMenu) {
                 const ac = Number(a)
                 const v0 = Number(vini)
                 const t = Number(time)
-                let resultado = (v0 * t) + ac
+                let resultadoMs = v0 + ac * t
+                let resultado = resultadoMs * 3.6;
 
                 if (resultado <= 40) {
                     console.log("Veículo muito limpo")
