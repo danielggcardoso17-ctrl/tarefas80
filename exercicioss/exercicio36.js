@@ -6,7 +6,7 @@ function ex36(rl, exibirMenu) {
     rl.question("Digite um valor para exibir sua tabuada: ", (valor) => {
         let value = parseFloat(valor)
 
-        if (isNaN(value)) {
+        if (isNaN(value) || value < 0) {
             console.log("Valor inválido...")
             rl.question("Pressione ENTER para voltar ao menu...", () => {
                 exibirMenu();
