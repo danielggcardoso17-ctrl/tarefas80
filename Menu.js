@@ -35,6 +35,7 @@ import ex33 from './exercicioss/exercicio33.js';
 import ex34 from './exercicioss/exercicio34.js';
 import ex35 from './exercicioss/exercicio35.js';
 import ex36 from './exercicioss/exercicio36.js';
+import { ex37 } from './exercicioss/exercicio37.js';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -77,7 +78,8 @@ const exercicios = {
   33: { nome: "exercício 33", fn: ex33 },
   34: { nome: "exercício 34", fn: ex34 },
   35: { nome: "exercício 35", fn: ex35 },
-  36: { nome: "exercicio 36", fn: ex36 }
+  36: { nome: "exercicio 36", fn: ex36 },
+  37: { nome: "exercicio 37", fn: ex37 }
 }
 
 function exibirMenu() {
@@ -123,6 +125,7 @@ function exibirMenu() {
   console.log("34. Exercicio 34")
   console.log("35. Exercicio 35")
   console.log("36. Exercício 36")
+  console.log("37. Exercício 37")
 
   rl.question("Escolha uma opção (1-80): ", (opcao) => {
     const suaEscolha = opcao.trim()
