@@ -2,18 +2,18 @@ const pergunta = (rl, texto) => new Promise((resolve) => rl.question(texto, reso
 
 async function ex34(rl, exibirMenu) {
     console.clear();
-    console.log("=========================================")
-    console.log("-----------VALIDAÇÃO DE SEXO-------------")
-    console.log("=========================================")
+    console.log("===========================================")
+    console.log("-----------VALIDAÇÃO DE GÊNERO-------------")
+    console.log("===========================================")
 
-    let sexo;
+    let genero;
 
     do {
-        sexo = (await pergunta(rl, "Digite seu sexo (F ou M): ")).toUpperCase().trim();
-        if (sexo !== "F" && sexo !== "M") console.log("Entrada inválida! Digite apenas F ou M.");
-    } while (sexo !== "F" && sexo !== "M");
+        genero = (await pergunta(rl, "Digite seu gênero (F ou M): ")).toUpperCase().trim();
+        if (genero !== "F" && genero !== "M") console.log("Entrada inválida! Digite apenas F ou M.");
+    } while (genero !== "F" && genero !== "M");
 
-    console.log(`Sexo registrado: ${sexo}`);
+    console.log(`Gênero registrado: ${genero}`);
     await pergunta(rl, "Pressione ENTER para voltar ao menu...");
     exibirMenu();
 }
