@@ -7,8 +7,9 @@ export async function ex39(rl, exibirMenu) {
     let soma = 0
 
     for (let i = 1; i <= 100; i++) {
-        console.log(soma = soma + i)
+        soma = soma + i
     }
+    console.log(soma)
 
     rl.question("Pressione ENTER para ver a prôxima tabuada...", () => {
         exibirMenu();
