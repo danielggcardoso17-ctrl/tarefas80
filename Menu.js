@@ -42,6 +42,12 @@ import { ex40 } from './exercicioss/exercicio40.js';
 import { ex41 } from './exercicioss/exercicio41.js';
 import { ex42 } from './exercicioss/exercicio42.js';
 import { ex43 } from './exercicioss/exercicio43.js';
+import { ex44 } from './exercicioss/exercicio44.js';
+import { ex45 } from './exercicioss/exercicio45.js';
+import { ex46 } from './exercicioss/exercicio46.js';
+import { ex47 } from './exercicioss/exercicio47.js';
+import { ex48 } from './exercicioss/exercicio48.js';
+import { ex49 } from './exercicioss/exercicio49.js';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -91,7 +97,13 @@ const exercicios = {
   40: { nome: "exercicios 40", fn: ex40 },
   41: { nome: "exercicio 41", fn: ex41 },
   42: { nome: "exercicio 42", fn: ex42 },
-  43: { nome: "exercicio 43", fn: ex43 }
+  43: { nome: "exercicio 43", fn: ex43 },
+  44: { nome: "exercicio 44", fn: ex44 },
+  45: { nome: "exercicio 45", fn: ex45 },
+  46: { nome: "exercicio 46", fn: ex46 },
+  47: { nome: "exercicio 47", fn: ex47 },
+  48: { nome: "exercicio 48", fn: ex48 },
+  49: { nome: "exercicio 49", fn: ex49 }
 }
 
 function exibirMenu() {
@@ -142,6 +154,12 @@ function exibirMenu() {
   console.log("41. Exercício 41")
   console.log("42. Exercício 42")
   console.log("43. Exercício 43")
+  console.log("44. Exercício 44")
+  console.log("45. Exercício 45")
+  console.log("46. Exercício 46")
+  console.log("47. Exercício 47")
+  console.log("48. Exercício 48")
+  console.log("49. Exercício 49")
 
   rl.question("Escolha uma opção (1-80): ", (opcao) => {
     const suaEscolha = opcao.trim()
