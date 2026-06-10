@@ -1,7 +1,7 @@
 export function ex49() {
     const totalNumeros = 60;
     let jogosExibidos = 0;
-    const limiteExibicao = 50;
+    const limiteExibicao = 100;
 
     for (let n1 = 1; n1 <= totalNumeros - 5; n1++) {
         for (let n2 = n1 + 1; n2 <= totalNumeros - 4; n2++) {
