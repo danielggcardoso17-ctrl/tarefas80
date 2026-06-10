@@ -3,9 +3,6 @@ export function ex49() {
     let jogosExibidos = 0;
     const limiteExibicao = 50;
 
-    console.log("Gerando combinações... Por favor, aguarde.\n");
-
-
     for (let n1 = 1; n1 <= totalNumeros - 5; n1++) {
         for (let n2 = n1 + 1; n2 <= totalNumeros - 4; n2++) {
             for (let n3 = n2 + 1; n3 <= totalNumeros - 3; n3++) {
@@ -24,7 +21,7 @@ export function ex49() {
         }
     }
 
-    console.log("\n--------------------------------------------------");
+    console.log("--------------------------------------------------");
     console.log(`Exibição limitada às primeiras ${limiteExibicao} combinações.`);
     console.log("--------------------------------------------------");
 }
