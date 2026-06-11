@@ -51,7 +51,8 @@ import { ex49 } from './exercicioss/exercicio49.js';
 import { ex50 } from './exercicioss/exercicio50.js';
 import { ex51 } from './exercicioss/exercicio51.js';
 import { ex52 } from './exercicioss/exercicio52.js';
-
+import { ex53 } from './exercicioss/exercicio53.js';
+import { ex54 } from './exercicioss/exercicio54.js';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -111,6 +112,8 @@ const exercicios = {
   50: { nome: "exercicio 50", fn: ex50 },
   51: { nome: "exercicio 51", fn: ex51 },
   52: { nome: "exercicio 52", fn: ex52 },
+  53: { nome: "exercicio 53", fn: ex53 },
+  54: { nome: "exercicio 54", fn: ex54 }
 }
 
 function exibirMenu() {
@@ -169,7 +172,9 @@ function exibirMenu() {
   console.log("49. Exercício 49")
   console.log("50. Exercício 50")
   console.log("51. Exercício 51")
-  console.log("51. Exercício 52")
+  console.log("52. Exercício 52")
+  console.log("53. Exercício 53")
+  console.log("54. Exercício 54")
 
 
   rl.question("Escolha uma opção (1-80): ", (opcao) => {
