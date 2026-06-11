@@ -55,6 +55,7 @@ import { ex53 } from './exercicioss/exercicio53.js';
 import { ex54 } from './exercicioss/exercicio54.js';
 import { ex55 } from './exercicioss/exercicio55.js';
 import { ex56 } from './exercicioss/exercicio56.js';
+import { ex57 } from './exercicioss/exercicio57.js';
 
 
 
@@ -119,7 +120,8 @@ const exercicios = {
   53: { nome: "exercicio 53", fn: ex53 },
   54: { nome: "exercicio 54", fn: ex54 },
   55: { nome: "exercicio 55", fn: ex55 },
-  56: { nome: "exercicio 56", fn: ex56 }
+  56: { nome: "exercicio 56", fn: ex56 },
+  57: { nome: "exercicio 57", fn: ex57 }
 }
 
 function exibirMenu() {
