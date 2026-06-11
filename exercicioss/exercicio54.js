@@ -2,9 +2,9 @@ const pergunta = (rl, texto) => new Promise((resolve) => rl.question(texto, reso
 
 export async function ex54(rl, exibirMenu) {
     console.clear()
-    console.log("===================================================================")
-    console.log("-----------EXIBIR UM NOVO ARRAY APÓS UMA MULTIPLICAÇÃO-------------")
-    console.log("===================================================================")
+    console.log("==============================================================")
+    console.log("-----------EXIBIR UM ARRAY APÓS UMA MULTIPLICAÇÃO-------------")
+    console.log("==============================================================")
 
     let array = []
     let valores;

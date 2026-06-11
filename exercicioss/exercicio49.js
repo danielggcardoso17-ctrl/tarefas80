@@ -1,7 +1,7 @@
-export function ex49() {
+export async function ex49(rl, exibirMenu) {
     const totalNumeros = 60;
     let jogosExibidos = 0;
-    const limiteExibicao = 100;
+    const limiteExibicao = 5000;
 
     for (let n1 = 1; n1 <= totalNumeros - 5; n1++) {
         for (let n2 = n1 + 1; n2 <= totalNumeros - 4; n2++) {
@@ -11,7 +11,7 @@ export function ex49() {
                         for (let n6 = n5 + 1; n6 <= totalNumeros; n6++) {
 
                             if (jogosExibidos < limiteExibicao) {
-                                console.log(`Jogos: [${n1}, ${n2}, ${n3}, ${n4}, ${n5}, ${n6}]`);
+                                console.log(`Valores: [${n1}, ${n2}, ${n3}, ${n4}, ${n5}, ${n6}]`);
                                 jogosExibidos++;
                             }
                         }
@@ -24,8 +24,10 @@ export function ex49() {
     console.log("--------------------------------------------------");
     console.log(`Exibição limitada às primeiras ${limiteExibicao} combinações.`);
     console.log("--------------------------------------------------");
+
+
+    await perguntar(rl, ("Pressione ENTER para voltar ao menu"))
 }
 
-// Executa a função
-ex49();
+
 
