@@ -6,23 +6,22 @@ export async function ex57(rl, exibirMenu) {
     console.log("-----------ARMAZENAR E EXIBIR O NOME E A IDADE DE 100 PESSOAS-------------")
     console.log("==========================================================================")
 
+    const listaDePessoas = []
+    const totalDePessoas = 2
 
-    let nomes = []
-    let idade = []
-    let n;
-    let age;
+    for (let i = 1; i <= totalDePessoas; i++) {
+        console.log(`Cadastro #${i}`);
 
-    for (let i = 0; i < 2; i++) {
-        n = await pergunta(rl, `Digite o nome da ${i + 1}o pessoa: `)
-        age = parseFloat(await pergunta(rl, `Digite a idade da ${i + 1}o pessoa: `))
+        let nome = await pergunta(rl, 'Digite o nome: ');
+        let idadeInput = await pergunta(rl, 'Digite a idade: ');
+        let idade = parseInt(idadeInput, 10);
+
+        listaDePessoas.push({ nome: nome, idade: idade });
     }
 
-    if (typeof n != "string" || age < 0 || isNaN(age)) {
-        await pergunta(rl, `Valor inválido pressione ENTER para tentar novamente...`)
-        ex57(rl, exibirMenu)
-    } else {
-        nomes.push(n)
-        idade.push(age)
-    }
+    console.table(listaDePessoas)
+
+    await pergunta(rl, "Pressione ENTER para voltar ao menu...")
+    exibirMenu()
 
 }
